@@ -7,4 +7,5 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
 	title = "AngularPortfolio sd";
+	x = [1, 2, 3];
 }
