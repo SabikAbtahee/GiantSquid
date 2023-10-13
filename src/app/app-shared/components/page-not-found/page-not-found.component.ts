@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
 
 @Component({
-  selector: 'app-page-not-found',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './page-not-found.component.html',
-  styleUrls: ['./page-not-found.component.scss']
+	selector: "app-page-not-found",
+	standalone: true,
+	imports: [CommonModule, RouterModule],
+	templateUrl: "./page-not-found.component.html",
+	styleUrls: ["./page-not-found.component.scss"]
 })
-export class PageNotFoundComponent {
-
-}
+export class PageNotFoundComponent {}

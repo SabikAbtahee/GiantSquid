@@ -29,6 +29,7 @@ import { LayoutComponent } from "./containers/layout/layout.component";
 		MaterialLayoutComponent,
 		LayoutComponent
 	],
-	imports: [CommonModule, RouterModule]
+	imports: [CommonModule, RouterModule],
+	exports: [LayoutComponent]
 })
 export class LayoutModule {}

@@ -20,7 +20,7 @@ export const routes: Routes = [
 					).then((res) => res.PageNotFoundComponent)
 			}
 		]
-	},
+	}
 
-	{ path: "**", component: PageNotFoundComponent }
+	// { path: "**", component: PageNotFoundComponent }
 ];
