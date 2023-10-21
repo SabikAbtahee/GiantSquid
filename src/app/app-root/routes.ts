@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { LayoutComponent } from "../layout/containers/layout/layout.component";
-import { PageNotFoundComponent } from "../app-shared/components/page-not-found/page-not-found.component";
 
 export const routes: Routes = [
 	{
@@ -15,9 +14,7 @@ export const routes: Routes = [
 			{
 				path: "home",
 				loadComponent: () =>
-					import(
-						"../app-shared/components/page-not-found/page-not-found.component"
-					).then((res) => res.PageNotFoundComponent)
+					import("@common").then((res) => res.PageNotFoundComponent)
 			}
 		]
 	}

@@ -1,0 +1,19 @@
+<div>
+	<button mat-icon-button [matMenuTriggerFor]="menu">
+		<div class="flex">
+			<span
+				class="fi w-6 h-4 x"
+				[ngClass]="getFiPrefix(selectedLanguageCode)"
+			></span>
+		</div>
+	</button>
+</div>
+
+<mat-menu #menu="matMenu">
+	<div *ngFor="let i of menuItems">
+		<button mat-menu-item (click)="setLang(i.Code)">
+			<span class="fi w-6 h-4" [ngClass]="getFiPrefix(i.Code)"></span>
+			<span class="ml-3">{{ i.Lang }}</span>
+		</button>
+	</div>
+</mat-menu>

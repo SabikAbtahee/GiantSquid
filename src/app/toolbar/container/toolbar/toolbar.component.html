@@ -2,9 +2,8 @@
 	<div>
 		<app-logo></app-logo>
 	</div>
-	<div>
-		<button mat-icon-button color="primary" (click)="enterFullScreen()">
-			<app-icon class="cursor-pointer" [iconName]="'fullscreen'"></app-icon>
-		</button>
+	<div class="flex flex-row items-center justify-center">
+		<app-language-picker></app-language-picker>
+		<app-full-screen></app-full-screen>
 	</div>
 </mat-toolbar>

@@ -18,7 +18,17 @@
 		"target": "ES2022",
 		"module": "ES2022",
 		"useDefineForClassFields": false,
-		"lib": ["ES2022", "dom"]
+		"lib": ["ES2022", "dom"],
+		"paths": {
+			"@environment": ["./src/environements/environment.ts"],
+			"@common": ["./src/app/app-common/index.ts"],
+      "@core": ["./src/app/app-core/index.ts"],
+      "@shared": ["./src/app/app-shared/app-shared.module.ts"],
+      "@material": ["./src/app/app-shared/material.module.ts"],
+      "@animation":["./src/app/app-core/animations/animations.ts"]
+
+
+		}
 	},
 	"angularCompilerOptions": {
 		"enableI18nLegacyMessageIdFormat": false,
