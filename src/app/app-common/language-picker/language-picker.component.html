@@ -1,8 +1,8 @@
 <div>
 	<button mat-icon-button [matMenuTriggerFor]="menu">
-		<div class="flex">
+		<div class="flex" [@fadeInAnimation]>
 			<span
-				class="fi w-6 h-4 x"
+				class="fi w-6 h-4"
 				[ngClass]="getFiPrefix(selectedLanguageCode)"
 			></span>
 		</div>
