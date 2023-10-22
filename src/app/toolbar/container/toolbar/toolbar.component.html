@@ -1,9 +1,13 @@
-<mat-toolbar class="flex flex-row items-center justify-between">
+<mat-toolbar class="flex flex-row items-center justify-between shadow">
 	<div>
 		<app-logo></app-logo>
 	</div>
 	<div class="flex flex-row items-center justify-center">
 		<app-language-picker></app-language-picker>
 		<app-full-screen></app-full-screen>
+		<app-icon-button [iconName]="'search'"></app-icon-button>
+		<app-icon-button [iconName]="'widgets'"></app-icon-button>
+		<app-icon-button [iconName]="'inbox'"></app-icon-button>
+		<app-icon-button [iconName]="'notifications'"></app-icon-button>
 	</div>
 </mat-toolbar>

@@ -3,15 +3,10 @@
 @tailwind utilities;
 
 @import "./animations.scss";
-@import "/node_modules/flag-icons/css/flag-icons.min.css";
 body {
 	font-variation-settings:
 		"FILL" 0,
 		"wght" 500,
 		"GRAD" 0,
 		"opsz" 24;
-}
-
-.fi {
-	transition: all 1s ease;
 }
