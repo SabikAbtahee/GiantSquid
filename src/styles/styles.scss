@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-// @import "./animations.scss";
-
 html,
 body {
 	height: 100%;
@@ -16,4 +14,22 @@ body {
 		"wght" 500,
 		"GRAD" 0,
 		"opsz" 24;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+	background-color: #7978a0;
+	margin-block: 1px;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #21c787;
+	border-radius: 10px;
+	height: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: red;
 }

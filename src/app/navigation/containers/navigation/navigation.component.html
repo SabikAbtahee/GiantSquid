@@ -1,0 +1,31 @@
+<!-- Make many dumb components that will have all the navigations but in different orientation -->
+
+<!-- Making classy style first -->
+
+<div class="flex flex-col h-full shadow hover:overflow-x-hidden">
+	<div class="flex flex-row justify-between items-center p-2">
+		<div>
+			<app-logo [logoClass]="'w-14 h-12'"></app-logo>
+		</div>
+		<div class="flex flex-row justify-end items-center">
+			<div>
+				<app-icon-button [iconName]="'notifications'"></app-icon-button>
+			</div>
+			<div>
+				<app-icon-button [iconName]="'account_circle'"></app-icon-button>
+			</div>
+		</div>
+	</div>
+	<div>-----</div>
+	<div class="mt-2 px-3" *ngFor="let i of navigations">
+		<div>{{ i.Title }}</div>
+		<div>{{ i.SubTitle }}</div>
+		<div
+			class="flex flex-row justify-start items-center gap-2"
+			*ngFor="let j of i.ChildBusinesses"
+		>
+			<app-icon [iconName]="j.Icon"></app-icon>
+			<span>{{ j.Title }}</span>
+		</div>
+	</div>
+</div>

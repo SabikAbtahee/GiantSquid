@@ -14,6 +14,9 @@ import { MaterialLayoutComponent } from "./components/material-layout/material-l
 import { ModernLayoutComponent } from "./components/modern-layout/modern-layout.component";
 import { ThinLayoutComponent } from "./components/thin-layout/thin-layout.component";
 import { LayoutComponent } from "./containers/layout/layout.component";
+import { MaterialModule } from "@material";
+import { AppSharedModule } from "@shared";
+import { NavigationModule } from "../navigation/navigation.module";
 
 @NgModule({
 	declarations: [
@@ -30,7 +33,14 @@ import { LayoutComponent } from "./containers/layout/layout.component";
 		MaterialLayoutComponent,
 		LayoutComponent
 	],
-	imports: [CommonModule, RouterModule, ToolbarModule],
+	imports: [
+		CommonModule,
+		RouterModule,
+		ToolbarModule,
+		MaterialModule,
+		AppSharedModule,
+		NavigationModule
+	],
 	exports: [LayoutComponent]
 })
 export class LayoutModule {}
