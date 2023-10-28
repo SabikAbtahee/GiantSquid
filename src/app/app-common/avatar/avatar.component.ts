@@ -9,5 +9,5 @@ import { CommonModule } from "@angular/common";
 	styleUrls: ["./avatar.component.scss"]
 })
 export class AvatarComponent {
-	@Input() imageSrc = "assets/PortalLogo/Logo.svg";
+	@Input() imageSrc = "assets/Svgs/avatar_male.svg";
 }
