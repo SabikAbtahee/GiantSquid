@@ -1,7 +1,6 @@
 <!-- Make many dumb components that will have all the navigations but in different orientation -->
 
 <!-- Making classy style first -->
-
 <div class="flex flex-col h-full shadow hover:overflow-x-hidden">
 	<div class="flex flex-row justify-between items-center p-2">
 		<div>
@@ -18,7 +17,7 @@
 	</div>
 	<div>-----</div>
 	<div class="mt-2 px-3" *ngFor="let i of navigations">
-		<div class="mat-headline-5">{{ i.Title }}</div>
+		<div>{{ i.Title }}</div>
 		<div>{{ i.SubTitle }}</div>
 		<div
 			class="flex flex-row justify-start items-center gap-2"

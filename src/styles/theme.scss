@@ -1,10 +1,17 @@
 @use "@angular/material" as mat;
+@use "sass:map";
 @import "./colors.scss";
+@import "./typography.scss";
+
 @include mat.core();
 
 $GiantSquid-primary: mat.define-palette(mat.$light-blue-palette);
 $GiantSquid-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
 $GiantSquid-warn: mat.define-palette(mat.$red-palette, 900);
+
+$my-typography: mat.define-typography-config(
+	$font-family: $portal-font-family
+);
 
 $GiantSquid-theme: mat.define-light-theme(
 	(
@@ -12,8 +19,10 @@ $GiantSquid-theme: mat.define-light-theme(
 			primary: $GiantSquid-primary,
 			accent: $GiantSquid-accent,
 			warn: $GiantSquid-warn
-		)
+		),
+		typography: $my-typography
 	)
 );
 
 @include mat.all-component-themes($GiantSquid-theme);
+@include mat.typography-hierarchy($my-typography);
