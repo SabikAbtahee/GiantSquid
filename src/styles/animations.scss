@@ -1,0 +1,18 @@
+.pulse-icon {
+	animation: pulse 2s infinite;
+}
+@keyframes pulse {
+	0%,
+	100% {
+		font-variation-settings: "wght" 100;
+	}
+	@for $i from 1 through 9 {
+		#{$i * 10}% {
+			font-variation-settings: "wght" #{100 + $i * 100};
+		}
+	}
+}
+
+.fi {
+	transition: all 0.5s ease;
+}
