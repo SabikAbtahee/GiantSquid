@@ -18,17 +18,19 @@
 
 	<div class="flex flex-col items-center justify-center p-4">
 		<app-avatar></app-avatar>
-    <div class="mt-3 flex flex-col items-center justify-center">
-      <div class="m-0 mat-subtitle-1">Sabik Abtahee</div>
-      <div class="mat-subtitle-2">sabik.abtahee@gmail.com</div>
-    </div>
+		<div class="mt-3 flex flex-col items-center justify-center">
+			<div class="subtitle-1">Sabik Abtahee</div>
+			<div class="subtitle-2">sabik.abtahee@gmail.com</div>
+		</div>
 	</div>
 
-	<div class="mt-2 px-3" *ngFor="let i of navigations">
-		<div>{{ i.Title }}</div>
-		<div>{{ i.SubTitle }}</div>
+	<div class="mt-3 px-3" *ngFor="let i of navigations">
+		<div class="p-2">
+			<div class="body-2">{{ i.Title }}</div>
+			<div class="caption">{{ i.SubTitle }}</div>
+		</div>
 		<div
-			class="flex flex-row justify-start items-center gap-2"
+			class="flex flex-row justify-start items-center gap-2 py-3 px-3"
 			*ngFor="let j of i.ChildBusinesses"
 		>
 			<app-icon [iconName]="j.Icon"></app-icon>

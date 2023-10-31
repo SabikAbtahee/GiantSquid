@@ -15,6 +15,33 @@ export const BusinessList: Array<Business> = [
 				ChildBusinesses: null,
 				IsHidden: false,
 				Order: 1
+			},
+			{
+				Title: "ANALYTICS",
+				SubTitle: null,
+				FeatureName: Feature.Analytics,
+				Icon: "analytics",
+				ChildBusinesses: null,
+				IsHidden: false,
+				Order: 2
+			},
+			{
+				Title: "FINANCE",
+				SubTitle: null,
+				FeatureName: Feature.Finance,
+				Icon: "payments",
+				ChildBusinesses: null,
+				IsHidden: false,
+				Order: 3
+			},
+			{
+				Title: "CRYPTO",
+				SubTitle: null,
+				FeatureName: Feature.Crypto,
+				Icon: "monetization_on",
+				ChildBusinesses: null,
+				IsHidden: false,
+				Order: 4
 			}
 		],
 		FeatureName: Feature.Dashboard,

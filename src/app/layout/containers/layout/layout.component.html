@@ -1,5 +1,13 @@
-<app-toolbar></app-toolbar>
-
-<div class="w-60 h-full">
-	<app-navigation></app-navigation>
+<div class="flex flex-row h-full">
+	<div class="w-80 h-full">
+		<app-navigation></app-navigation>
+	</div>
+	<div class="flex flex-col w-full">
+		<app-toolbar></app-toolbar>
+		<router-outlet></router-outlet>
+	</div>
+	<div class="h-full w-16">
+		<!-- chatBAR -->
+		<div>Chat</div>
+	</div>
 </div>
