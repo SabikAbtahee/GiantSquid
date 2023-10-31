@@ -56,7 +56,7 @@ $portal-font-family: "Sometype Mono Custom";
 	font-style: italic;
 }
 
-$my-typography: mat.define-typography-config(
+$GiantSquid-typography: mat.define-typography-config(
 	$font-family: $portal-font-family,
 	$headline-1: mat.define-typography-level(96px, 96px, 300),
 	$headline-2: mat.define-typography-level(60px, 60px, 400),
@@ -75,7 +75,7 @@ $my-typography: mat.define-typography-config(
 
 @mixin custom-typography($class-name, $typography-level) {
 	.#{$class-name} {
-		@include mat.typography-level($my-typography, #{$typography-level});
+		@include mat.typography-level($GiantSquid-typography, #{$typography-level});
 	}
 }
 

@@ -6,8 +6,15 @@
 @import "./animations.scss";
 
 @include mat.core();
-@include mat.all-component-themes($GiantSquid-theme);
-@include mat.typography-hierarchy($my-typography);
+
+@include mat.core-theme($GiantSquid-dark-theme);
+@include mat.button-theme($GiantSquid-dark-theme);
+
+// @media (prefers-color-scheme: light) {
+// 	@include mat.core-color($GiantSquid-light-theme);
+// 	@include mat.button-color($GiantSquid-light-theme);
+// }
+@include mat.typography-hierarchy($GiantSquid-typography);
 
 @include mat.core-theme($GiantSquid-dark-theme);
 @include mat.button-theme($GiantSquid-dark-theme);

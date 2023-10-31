@@ -7,7 +7,7 @@ import { Component, Inject, OnInit, Renderer2 } from "@angular/core";
 	styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
-	private isDark = false;
+	private isDark = true;
 	themes = ["dark-scheme", "light-scheme"];
 
 	constructor(
@@ -17,6 +17,22 @@ export class AppComponent implements OnInit {
 
 	ngOnInit() {
 		console.log("AppComponent ngOninit");
+		this.removeBodyClass();
+		this.addBodyClass();
+	}
+
+	addBodyClass() {
+		this.renderer.addClass(
+			this.document.body,
+			this.isDark ? "dark-scheme" : "light-scheme"
+		);
+	}
+
+	removeBodyClass() {
+		this.renderer.removeClass(
+			this.document.body,
+			this.isDark ? "light-scheme" : "dark-scheme"
+		);
 	}
 
 	swithc() {

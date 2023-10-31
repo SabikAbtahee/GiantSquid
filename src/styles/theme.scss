@@ -1,11 +1,12 @@
 @use "sass:map";
 @use "@angular/material" as mat;
+@import "./typography.scss";
 
 $GiantSquid-primary: mat.define-palette(mat.$light-blue-palette);
 $GiantSquid-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
 $GiantSquid-warn: mat.define-palette(mat.$red-palette, 900);
 
-$GiantSquid-theme: mat.define-light-theme(
+$GiantSquid-light-theme: mat.define-light-theme(
 	(
 		color: (
 			primary: $GiantSquid-primary,
