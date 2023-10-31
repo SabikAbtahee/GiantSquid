@@ -5,13 +5,15 @@
 @import "./theme.scss";
 @import "./animations.scss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @include mat.core();
 @include mat.all-component-themes($GiantSquid-theme);
 @include mat.typography-hierarchy($my-typography);
+
+@include mat.core-theme($GiantSquid-dark-theme);
+@include mat.button-theme($GiantSquid-dark-theme);
+@include mat.all-component-typographies($GiantSquid-dark-theme);
+
+@include mat.typography-hierarchy($GiantSquid-typography);
 
 html,
 body {
@@ -43,3 +45,6 @@ body {
 // ::-webkit-scrollbar-thumb:hover {
 // 	background-color: red;
 // }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

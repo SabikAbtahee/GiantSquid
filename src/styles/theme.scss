@@ -14,3 +14,30 @@ $GiantSquid-theme: mat.define-light-theme(
 		)
 	)
 );
+
+$GiantSquid-dark-theme: mat.define-dark-theme(
+	(
+		color: (
+			primary: $GiantSquid-primary,
+			accent: $GiantSquid-accent,
+			warn: $GiantSquid-warn
+		),
+		typography: $GiantSquid-typography
+	)
+);
+
+.light-scheme {
+	@include mat.core-color($GiantSquid-light-theme);
+	@include mat.button-color($GiantSquid-light-theme);
+}
+.dark-scheme {
+	@include mat.core-color($GiantSquid-dark-theme);
+	@include mat.button-color($GiantSquid-dark-theme);
+}
+
+.prefered-scheme {
+	@media (prefers-color-scheme: light) {
+		@include mat.core-color($GiantSquid-light-theme);
+		@include mat.button-color($GiantSquid-light-theme);
+	}
+}
