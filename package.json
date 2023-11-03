@@ -6,7 +6,7 @@
     "test": "nx test",
     "lint": "nx lint",
     "start": "nx serve",
-    "serve": "nx run AngularPortfolio:serve --port=4205 --publicHost=giantsquid.com",
+    "serve": "nx run AngularPortfolio:serve --port=4205 --host=giantsquid.com",
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
     "prepare": "husky install",

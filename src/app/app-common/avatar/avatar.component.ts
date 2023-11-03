@@ -9,5 +9,21 @@ import { CommonModule } from "@angular/common";
 	styleUrls: ["./avatar.component.scss"]
 })
 export class AvatarComponent {
-	@Input() imageSrc = "assets/Svgs/avatar_male.svg";
+	@Input() avatarConfig: AvatarConfig = {
+		Id: "DefaultAvatar",
+		ImageSrc: "assets/Svgs/avatar_male.svg",
+		Name: "G",
+		ShowBorder: false,
+		IsSelected: false,
+		CssClass: "avatar"
+	};
+}
+
+export interface AvatarConfig {
+	Id?: string | number;
+	ImageSrc?: string;
+	Name: string;
+	ShowBorder?: boolean;
+	IsSelected?: boolean;
+	CssClass?: string;
 }

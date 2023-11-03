@@ -1,3 +1,14 @@
-<div class="rounded-full w-24 h-24">
-	<img [src]="imageSrc" alt="avatar image" />
+<div
+	[attr.id]="avatarConfig.Id"
+	[ngClass]="avatarConfig.CssClass"
+	class="rounded-full"
+>
+	<ng-container *ngIf="avatarConfig.ImageSrc; else Letter">
+		<img [src]="avatarConfig.ImageSrc" alt="avatar image" />
+	</ng-container>
+	<ng-template #Letter>
+		<div class="flex flex-col items-center justify-center h-full avatar-border">
+			<span>{{ avatarConfig.Name[0] }}</span>
+		</div>
+	</ng-template>
 </div>

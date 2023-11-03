@@ -17,6 +17,7 @@ import { LayoutComponent } from "./containers/layout/layout.component";
 import { MaterialModule } from "@material";
 import { AppSharedModule } from "@shared";
 import { NavigationModule } from "../navigation/navigation.module";
+import { ChatModule } from "../chat/chat.module";
 
 @NgModule({
 	declarations: [
@@ -33,14 +34,15 @@ import { NavigationModule } from "../navigation/navigation.module";
 		MaterialLayoutComponent,
 		LayoutComponent
 	],
+	exports: [LayoutComponent],
 	imports: [
 		CommonModule,
 		RouterModule,
 		ToolbarModule,
 		MaterialModule,
 		AppSharedModule,
-		NavigationModule
-	],
-	exports: [LayoutComponent]
+		NavigationModule,
+		ChatModule
+	]
 })
 export class LayoutModule {}
