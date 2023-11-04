@@ -1,7 +1,6 @@
 @use "sass:map";
 @use "typography";
 @use "@angular/material" as mat;
-@import "./typography.scss";
 
 $GiantSquid-primary: mat.define-palette(mat.$light-blue-palette);
 $GiantSquid-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
@@ -24,22 +23,28 @@ $GiantSquid-dark-theme: mat.define-dark-theme(
 			primary: $GiantSquid-primary,
 			accent: $GiantSquid-accent,
 			warn: $GiantSquid-warn
-		),
-		typography: $GiantSquid-typography
+		)
 	)
 );
 
 .light-scheme {
+  @include mat.all-component-colors($GiantSquid-light-theme);
 	@include mat.core-color($GiantSquid-light-theme);
 	@include mat.button-color($GiantSquid-light-theme);
+  @include mat.all-component-typographies($GiantSquid-light-theme);
+  @include mat.all-component-themes($GiantSquid-light-theme);
+
 }
 .dark-scheme {
+  @include mat.all-component-colors($GiantSquid-dark-theme);
 	@include mat.core-color($GiantSquid-dark-theme);
 	@include mat.button-color($GiantSquid-dark-theme);
+  @include mat.all-component-typographies($GiantSquid-dark-theme);
+  @include mat.all-component-themes($GiantSquid-dark-theme);
 }
 
-.prefered-scheme {
-	@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
+	.prefered-scheme {
 		@include mat.core-color($GiantSquid-light-theme);
 		@include mat.button-color($GiantSquid-light-theme);
 	}

@@ -1,27 +1,17 @@
 @use "sass:map";
 @use "@angular/material" as mat;
 
-@import "./typography.scss";
-@import "./theme.scss";
+@use "typography";
+@use "theme";
 @import "./animations.scss";
 
 @include mat.core();
 
-@include mat.core-theme($GiantSquid-dark-theme);
-@include mat.button-theme($GiantSquid-dark-theme);
-
-// @media (prefers-color-scheme: light) {
-// 	@include mat.core-color($GiantSquid-light-theme);
-// 	@include mat.button-color($GiantSquid-light-theme);
-// }
-@include mat.typography-hierarchy($GiantSquid-typography);
-
-@include mat.core-theme($GiantSquid-dark-theme);
-@include mat.button-theme($GiantSquid-dark-theme);
-@include mat.all-component-typographies($GiantSquid-dark-theme);
-
-@include mat.all-component-themes($GiantSquid-theme);
-@include mat.typography-hierarchy($GiantSquid-typography);
+// @include mat.core-theme(theme.$GiantSquid-dark-theme);
+// @include mat.button-theme(theme.$GiantSquid-dark-theme);
+// @include mat.typography-hierarchy(typography.$GiantSquid-typography);
+// @include mat.all-component-typographies(theme.$GiantSquid-dark-theme);
+@include mat.all-component-themes(theme.$GiantSquid-light-theme);
 
 html,
 body {
@@ -56,6 +46,7 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 .chat-member-avatar {
 	width: 32px;
