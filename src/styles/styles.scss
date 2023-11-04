@@ -7,11 +7,8 @@
 
 @include mat.core();
 
-// @include mat.core-theme(theme.$GiantSquid-dark-theme);
-// @include mat.button-theme(theme.$GiantSquid-dark-theme);
-// @include mat.typography-hierarchy(typography.$GiantSquid-typography);
-// @include mat.all-component-typographies(theme.$GiantSquid-dark-theme);
 @include mat.all-component-themes(theme.$GiantSquid-light-theme);
+@include mat.all-component-typographies(theme.$GiantSquid-light-theme);
 
 html,
 body {
@@ -46,7 +43,6 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 .chat-member-avatar {
 	width: 32px;
