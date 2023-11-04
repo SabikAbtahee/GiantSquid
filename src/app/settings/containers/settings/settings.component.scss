@@ -1,0 +1,23 @@
+.settings-icon {
+	position: absolute;
+	top: calc(50vh - 128px);
+	@media only screen and (min-width: 768px) {
+		right: 4rem;
+		margin-right: 4px;
+	}
+}
+
+:host ::ng-deep #iconId {
+	font-size: 16px;
+	color: white;
+	@apply animate-spin;
+}
+
+.icon-button {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	min-width: 40px;
+	padding: 0px;
+	height: 40px;
+	min-height: 40px;
+}

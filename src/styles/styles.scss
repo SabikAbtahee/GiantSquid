@@ -23,23 +23,22 @@ body {
 		"opsz" 24;
 }
 
-// ::-webkit-scrollbar {
-// 	width: 10px;
-// 	height: 10px;
-// }
-// ::-webkit-scrollbar-track {
-// 	background-color: #7978a0;
-// 	margin-block: 1px;
-// 	border-radius: 10px;
-// }
-// ::-webkit-scrollbar-thumb {
-// 	background-color: #21c787;
-// 	border-radius: 10px;
-// 	height: 2px;
-// }
-// ::-webkit-scrollbar-thumb:hover {
-// 	background-color: red;
-// }
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+::-webkit-scrollbar-track:hover {
+	background-color: #c7c4c475;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #72676775;
+	border-radius: 20px;
+	border: 2px solid transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgb(88, 88, 88);
+	width: 10px;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

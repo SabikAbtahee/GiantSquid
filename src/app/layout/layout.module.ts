@@ -18,6 +18,7 @@ import { MaterialModule } from "@material";
 import { AppSharedModule } from "@shared";
 import { NavigationModule } from "../navigation/navigation.module";
 import { ChatModule } from "../chat/chat.module";
+import { SettingsModule } from "../settings/settings.module";
 
 @NgModule({
 	declarations: [
@@ -42,7 +43,8 @@ import { ChatModule } from "../chat/chat.module";
 		MaterialModule,
 		AppSharedModule,
 		NavigationModule,
-		ChatModule
+		ChatModule,
+		SettingsModule
 	]
 })
 export class LayoutModule {}
