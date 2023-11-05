@@ -1,6 +1,6 @@
 <div class="settings-icon">
 	<button
-		(click)="(toggleSettingsBar)"
+		(click)="toggleSettingsBar()"
 		color="warn"
 		mat-flat-button
 		class="icon-button"
@@ -8,3 +8,10 @@
 		<app-icon [iconName]="'settings'"></app-icon>
 	</button>
 </div>
+
+<app-side-drawer #drawer [opened]="false" [position]="'end'">
+
+  <app-settings-view></app-settings-view>
+</app-side-drawer>
+
+

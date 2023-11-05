@@ -7,10 +7,12 @@
 	}
 }
 
-:host ::ng-deep #iconId {
-	font-size: 16px;
-	color: white;
-	@apply animate-spin;
+:host ::ng-deep {
+	#iconId {
+		font-size: 16px;
+		color: white;
+		@apply animate-spin;
+	}
 }
 
 .icon-button {
@@ -20,4 +22,8 @@
 	padding: 0px;
 	height: 40px;
 	min-height: 40px;
+}
+
+.settings-drawer {
+	width: 400px;
 }

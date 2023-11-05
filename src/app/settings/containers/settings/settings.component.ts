@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { Component, ViewChild } from "@angular/core";
+import { SideDrawerComponent } from "@common";
 
 @Component({
 	selector: "app-settings",
@@ -6,7 +7,13 @@ import { Component } from "@angular/core";
 	styleUrls: ["./settings.component.scss"]
 })
 export class SettingsComponent {
+	@ViewChild("drawer") drawer!: SideDrawerComponent;
+
 	toggleSettingsBar() {
-		console.log("cliked");
+		this.drawer?.toggle();
+	}
+
+	closeSettingsBar() {
+		this.drawer?.close();
 	}
 }
