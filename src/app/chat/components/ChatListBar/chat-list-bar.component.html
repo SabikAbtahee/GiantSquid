@@ -1,6 +1,5 @@
-<div
-	class="flex flew-col items-center justify-center my-4"
-	*ngFor="let i of chatMembers"
->
+@for (i of chatMembers; track i) {
+<div class="flex flew-col items-center justify-center my-4">
 	<app-avatar [avatarConfig]="avatarConfig" class="cursor-pointer"></app-avatar>
 </div>
+}

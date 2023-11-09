@@ -19,18 +19,20 @@
 				<mat-button-toggle-group
 					class="flex flex-row items-center justify-between"
 				>
-					<ng-container *ngFor="let i of schemesView">
-						<mat-button-toggle
-							mat-flat-button
-							[value]="i.Type"
-							class="rounded-full py-3 px-5"
-						>
-							<div class="flex flex-row gap-1 items-center justify-center">
-								<app-icon [iconName]="i.Icon"></app-icon>
-								<div>{{ i.Name }}</div>
-							</div>
-						</mat-button-toggle>
-					</ng-container>
+					@for (i of schemesView; track i) {
+
+					<mat-button-toggle
+						mat-flat-button
+						[value]="i.Type"
+						class="rounded-full py-3 px-5"
+					>
+						<div class="flex flex-row gap-1 items-center justify-center">
+							<app-icon [iconName]="i.Icon"></app-icon>
+							<div>{{ i.Name }}</div>
+						</div>
+					</mat-button-toggle>
+
+					}
 				</mat-button-toggle-group>
 			</div>
 		</div>

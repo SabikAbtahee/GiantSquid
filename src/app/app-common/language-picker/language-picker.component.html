@@ -10,10 +10,12 @@
 </div>
 
 <mat-menu #menu="matMenu">
-	<div *ngFor="let i of menuItems">
+	@for (i of menuItems; track i) {
+	<div>
 		<button mat-menu-item (click)="setLang(i.Code)">
 			<span class="fi w-6 h-4" [ngClass]="getFiPrefix(i.Code)"></span>
 			<span class="ml-3">{{ i.Lang }}</span>
 		</button>
 	</div>
+	}
 </mat-menu>

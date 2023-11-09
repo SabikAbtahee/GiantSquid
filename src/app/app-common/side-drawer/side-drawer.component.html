@@ -1,9 +1,11 @@
-<ng-container *ngIf="isDrawerOpen">
-	<div
-		id="SideDrawerId"
-		[ngClass]="position === 'end' ? 'right' : 'left'"
-		class="drawer mat-app-background shadow"
-	>
-		<ng-content></ng-content>
-	</div>
-</ng-container>
+@if (isDrawerOpen) {
+
+<div
+	id="SideDrawerId"
+	[ngClass]="position === 'end' ? 'right' : 'left'"
+	class="drawer mat-app-background shadow"
+>
+	<ng-content></ng-content>
+</div>
+
+}
