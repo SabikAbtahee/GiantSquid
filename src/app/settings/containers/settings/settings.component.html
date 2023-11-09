@@ -5,13 +5,12 @@
 		mat-flat-button
 		class="icon-button"
 	>
-		<app-icon [iconName]="'settings'"></app-icon>
+		<app-icon id="settingsIconId" [iconName]="'settings'"></app-icon>
 	</button>
 </div>
 
 <app-side-drawer #drawer [opened]="false" [position]="'end'">
-
-  <app-settings-view></app-settings-view>
+	<app-settings-view
+		(closeDrawerOutput)="closeSettingsBar($event)"
+	></app-settings-view>
 </app-side-drawer>
-
-

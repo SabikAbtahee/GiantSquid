@@ -2,13 +2,12 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-
     {
-      "name": "ng serve",
-      "type": "chrome",
+      "name": "Debug",
+      "type": "msedge",
       "request": "launch",
-      "preLaunchTask": "npm: serve",
-      "url": "http://giantsquid.com:4205/"
+      "url": "http://giantsquid.com:4205/",
+			"webRoot": "${workspaceFolder}"
     },
     {
       "name": "ng test",

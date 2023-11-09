@@ -33,7 +33,7 @@ import { MatTabsModule } from "@angular/material/tabs";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatTreeModule } from "@angular/material/tree";
-
+import { MatButtonToggleModule } from "@angular/material/button-toggle";
 @NgModule({
 	declarations: [],
 	imports: [
@@ -71,7 +71,8 @@ import { MatTreeModule } from "@angular/material/tree";
 		MatTabsModule,
 		MatToolbarModule,
 		MatTooltipModule,
-		MatTreeModule
+		MatTreeModule,
+		MatButtonToggleModule
 	],
 	exports: [
 		MatAutocompleteModule,
@@ -108,7 +109,8 @@ import { MatTreeModule } from "@angular/material/tree";
 		MatTabsModule,
 		MatToolbarModule,
 		MatTooltipModule,
-		MatTreeModule
+		MatTreeModule,
+		MatButtonToggleModule
 	],
 	providers: []
 })

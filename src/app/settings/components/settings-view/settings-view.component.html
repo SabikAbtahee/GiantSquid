@@ -1,7 +1,39 @@
 <div class="settings-view flex flex-col">
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
-
+	<div class="flex flex-row items-center justify-between p-4 primary-bg">
+		<div class="flex flex-row items-center gap-3">
+			<app-icon id="settingsIconId" [iconName]="'settings'"></app-icon>
+			<div class="headline-6">Settings</div>
+		</div>
+		<app-icon-button
+			(buttonClicked)="closeDrawer()"
+			[iconName]="'close'"
+		></app-icon-button>
+	</div>
+	<div class="p-6">
+		<div>
+			<hr class="my-8" />
+		</div>
+		<div class="flex flex-col gap-3">
+			<div class="subtitle-1">SCHEME</div>
+			<div>
+				<mat-button-toggle-group
+					class="flex flex-row items-center justify-between"
+				>
+					<ng-container *ngFor="let i of schemesView">
+						<mat-button-toggle
+							mat-flat-button
+							[value]="i.Type"
+							class="rounded-full py-3 px-5"
+						>
+							<div class="flex flex-row gap-1 items-center justify-center">
+								<app-icon [iconName]="i.Icon"></app-icon>
+								<div>{{ i.Name }}</div>
+							</div>
+						</mat-button-toggle>
+					</ng-container>
+				</mat-button-toggle-group>
+			</div>
+		</div>
+		<div></div>
+	</div>
 </div>

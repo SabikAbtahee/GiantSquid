@@ -13,7 +13,8 @@ export class SettingsComponent {
 		this.drawer?.toggle();
 	}
 
-	closeSettingsBar() {
+	closeSettingsBar(event: boolean) {
+		console.log(event);
 		this.drawer?.close();
 	}
 }

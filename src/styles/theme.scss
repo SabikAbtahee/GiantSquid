@@ -33,3 +33,8 @@ $GiantSquid-dark-theme: mat.define-dark-theme(
 		@include mat.all-component-colors($GiantSquid-dark-theme);
 	}
 }
+
+.primary-bg {
+	background-color: mat.get-color-from-palette($GiantSquid-primary, 500);
+	color: white;
+}
