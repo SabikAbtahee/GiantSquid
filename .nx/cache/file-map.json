@@ -91,6 +91,22 @@
         "hash": "13469207043343598078"
       },
       {
+        "file": ".nx/cache/file-map.json",
+        "hash": "3770472452453103014"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "1300912050625895174"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "9131103474366674754"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "14418720610459157168"
+      },
+      {
         "file": ".prettierignore",
         "hash": "16291117451639878324"
       },
@@ -140,7 +156,7 @@
       },
       {
         "file": "src/app/app-common/avatar/avatar.component.html",
-        "hash": "5935828292161880105"
+        "hash": "13767192058021250308"
       },
       {
         "file": "src/app/app-common/avatar/avatar.component.scss",
@@ -172,7 +188,7 @@
       },
       {
         "file": "src/app/app-common/language-picker/language-picker.component.html",
-        "hash": "250405456382691473"
+        "hash": "9035887760571454159"
       },
       {
         "file": "src/app/app-common/language-picker/language-picker.component.scss",
@@ -200,7 +216,7 @@
       },
       {
         "file": "src/app/app-common/side-drawer/side-drawer.component.html",
-        "hash": "13744999777099000069"
+        "hash": "5704181409505714535"
       },
       {
         "file": "src/app/app-common/side-drawer/side-drawer.component.scss",
@@ -328,7 +344,7 @@
       },
       {
         "file": "src/app/chat/components/ChatListBar/chat-list-bar.component.html",
-        "hash": "17604591382055607316"
+        "hash": "6854291457302133449"
       },
       {
         "file": "src/app/chat/components/ChatListBar/chat-list-bar.component.scss",
@@ -524,7 +540,7 @@
       },
       {
         "file": "src/app/navigation/containers/navigation/navigation.component.html",
-        "hash": "2199307001024043723"
+        "hash": "14925135600732436270"
       },
       {
         "file": "src/app/navigation/containers/navigation/navigation.component.scss",
@@ -544,7 +560,7 @@
       },
       {
         "file": "src/app/settings/components/settings-view/settings-view.component.html",
-        "hash": "15945584479370045083"
+        "hash": "392401489389653166"
       },
       {
         "file": "src/app/settings/components/settings-view/settings-view.component.scss",
