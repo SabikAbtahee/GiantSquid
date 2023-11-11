@@ -25,8 +25,7 @@
 			"@core": ["./src/app/app-core/index.ts"],
 			"@environment": ["./src/environements/environment.ts"],
 			"@material": ["./src/app/app-shared/material.module.ts"],
-			"@shared": ["./src/app/app-shared/app-shared.module.ts"],
-			"@styles": ["./src/styles/colors.scss"]
+			"@shared": ["./src/app/app-shared/app-shared.module.ts"]
 		}
 	},
 	"angularCompilerOptions": {
