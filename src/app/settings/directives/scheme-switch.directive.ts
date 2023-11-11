@@ -33,7 +33,6 @@ export class SchemeSwitchDirective {
 	}
 
 	private removeClass(className: string) {
-    console.log(className);
 		this.renderer.removeClass(this.document.body, className);
 	}
 

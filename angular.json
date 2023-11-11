@@ -31,8 +31,11 @@
             "styles": [
               "src/styles/theme.scss",
               "src/styles/styles.scss",
+              "src/styles/colors.scss",
               "./node_modules/flag-icons/css/flag-icons.min.css",
-              "src/styles/animations.scss"
+              "src/styles/animations.scss",
+              "src/styles/shared.scss"
+
             ],
             "scripts": []
           },
