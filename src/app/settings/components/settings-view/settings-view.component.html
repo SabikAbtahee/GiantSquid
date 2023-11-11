@@ -17,16 +17,17 @@
 			<div class="subtitle-1">SCHEME</div>
 			<div>
 				<mat-button-toggle-group
-					class="flex flex-row items-center justify-between"
+					class="flex flex-row items-center justify-between gap-3"
 				>
-					@for (i of schemesView; track i) {
+					@for (i of schemesView; track i.Name) {
 
 					<mat-button-toggle
 						mat-flat-button
+						[appSchemeSwitch]="i.Type"
 						[value]="i.Type"
-						class="rounded-full py-3 px-5"
+						class="rounded-full p-3 h-full mat-app-background"
 					>
-						<div class="flex flex-row gap-1 items-center justify-center">
+						<div class="flex flex-row gap-1 items-center justify-center h-full">
 							<app-icon [iconName]="i.Icon"></app-icon>
 							<div>{{ i.Name }}</div>
 						</div>
@@ -39,3 +40,7 @@
 		<div></div>
 	</div>
 </div>
+<!--
+<button [appSchemeSwitch]="schemes.light">Light</button>
+<button [appSchemeSwitch]="schemes.dark">Dark</button>
+<button [appSchemeSwitch]="schemes.prefered">Prefered</button> -->

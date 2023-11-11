@@ -9,7 +9,7 @@ import { SettingsViewComponent } from "./components/settings-view/settings-view.
 
 @NgModule({
     declarations: [SchemeSwitchDirective, SettingsComponent, SettingsViewComponent],
-    exports: [SchemeSwitchDirective, SettingsComponent],
+    exports: [SettingsComponent],
     imports: [CommonModule, AppSharedModule, MaterialModule, SideDrawerComponent]
 })
 export class SettingsModule {}

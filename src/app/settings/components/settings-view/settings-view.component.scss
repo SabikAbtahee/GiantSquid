@@ -1,5 +1,26 @@
+@import "../../../../styles/colors.scss";
 
-.settings-view{
-  width: 400px;
-  height: 100%;
+.settings-view {
+	width: 400px;
+	height: 100%;
+}
+
+:host ::ng-deep {
+	mat-button-toggle-group {
+		box-shadow: none !important;
+		border: none;
+	}
+
+	mat-button-toggle {
+		height: 44px;
+		box-sizing: border-box;
+		border: 1px solid black !important;
+	}
+	.mat-button-toggle-button,
+	.mat-button-toggle-label-content {
+		height: 100%;
+	}
+	.mat-button-toggle-checked {
+		border: 2px solid $primary !important;
+	}
 }

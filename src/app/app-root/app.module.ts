@@ -3,7 +3,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { LayoutModule } from "../layout/layout.module";
-import { SettingsModule } from "../settings/settings.module";
 import { AppComponent } from "./app.component";
 import { routes } from "./routes";
 
@@ -13,8 +12,8 @@ import { routes } from "./routes";
 		BrowserModule,
 		BrowserAnimationsModule,
 		RouterModule.forRoot(routes),
-		LayoutModule,
-    SettingsModule
+		LayoutModule
+
 	],
 	providers: [],
 	bootstrap: [AppComponent]
