@@ -11,15 +11,41 @@
 	}
 
 	mat-button-toggle {
-		height: 44px;
+		height: 40px;
 		box-sizing: border-box;
 		border: 1px solid colors.$gs-grey-300 !important;
 	}
 	.mat-button-toggle-button,
 	.mat-button-toggle-label-content {
 		height: 100%;
+		padding: 0px !important;
 	}
 	.mat-button-toggle-checked {
 		border: 2px solid colors.$primary !important;
 	}
+}
+
+.dot {
+	height: 12px;
+	width: 12px;
+	border-radius: 50%;
+}
+
+.default-theme {
+	background-color: rgb(79, 70, 229);
+}
+.brand-theme {
+	background-color: rgb(33, 150, 243);
+}
+.teal-theme {
+	background-color: rgb(13, 148, 136);
+}
+.rose-theme {
+	background-color: rgb(244, 63, 94);
+}
+.purple-theme {
+	background-color: rgb(147, 51, 234);
+}
+.amber-theme {
+	background-color: rgb(245, 158, 11);
 }

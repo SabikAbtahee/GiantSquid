@@ -10,38 +10,82 @@
 		></app-icon-button>
 	</div>
 	<div class="p-6">
+		<!-- THEME -->
 		<div>
-			<hr class="my-8" />
-		</div>
-		<div class="flex flex-col gap-3">
-			<div class="subtitle-1">SCHEME</div>
-			<div>
-				<mat-button-toggle-group
-					class="flex flex-row items-center justify-between gap-3"
-				>
-					@for (i of schemesView; track i.Name) {
-
-					<mat-button-toggle
-						mat-flat-button
-						[appSchemeSwitch]="i.Type"
-						[value]="i.Type"
-            [checked]="i.Selected"
-						class="rounded-full p-3 h-full mat-app-background"
+			<div class="flex flex-col gap-4">
+				<div class="subtitle-1">THEME</div>
+				<div>
+					<mat-button-toggle-group
+						class="flex flex-row flex-wrap items-center justify-between gap-2"
 					>
-						<div class="flex flex-row gap-1 items-center justify-center h-full">
-							<app-icon [iconName]="i.Icon"></app-icon>
-							<div>{{ i.Name }}</div>
-						</div>
-					</mat-button-toggle>
+						@for (i of themesView; track i.Name) {
 
-					}
-				</mat-button-toggle-group>
+						<mat-button-toggle
+							mat-flat-button
+							[value]="i.Type"
+							[checked]="i.Selected"
+							disableRipple
+							class="flex flex-row items-center justify-center rounded-full h-full mat-app-background w-28"
+						>
+							<div class="flex flex-row items-center justify-start h-full">
+								<div [ngClass]="i.Type" class="dot mr-2"></div>
+								<div
+									class="flex flex-row gap-1 items-center justify-center h-full"
+								>
+									{{ i.Name }}
+								</div>
+							</div>
+						</mat-button-toggle>
+						}
+					</mat-button-toggle-group>
+				</div>
 			</div>
 		</div>
-		<div></div>
+		<!-- SCHEME -->
+		<div>
+			<div>
+				<hr class="my-8" />
+			</div>
+			<div class="flex flex-col gap-4">
+				<div class="subtitle-1">SCHEME</div>
+				<div>
+					<mat-button-toggle-group
+						class="flex flex-row items-center justify-between gap-3"
+					>
+						@for (i of schemesView; track i.Name) {
+
+						<mat-button-toggle
+							mat-flat-button
+							[appSchemeSwitch]="i.Type"
+							[value]="i.Type"
+							[checked]="i.Selected"
+							disableRipple
+							class="rounded-full p-3 h-full mat-app-background w-28"
+						>
+							<div
+								class="flex flex-row gap-1 items-center justify-center h-full"
+							>
+								<app-icon [iconName]="i.Icon"></app-icon>
+								<div>{{ i.Name }}</div>
+							</div>
+						</mat-button-toggle>
+
+						}
+					</mat-button-toggle-group>
+				</div>
+			</div>
+			<div></div>
+		</div>
+		<!-- Layout -->
+		<div>
+			<div>
+				<hr class="my-8" />
+			</div>
+			<div class="flex flex-col gap-4">
+				<div class="subtitle-1">LAYOUT</div>
+				<div></div>
+			</div>
+			<div></div>
+		</div>
 	</div>
 </div>
-<!--
-<button [appSchemeSwitch]="schemes.light">Light</button>
-<button [appSchemeSwitch]="schemes.dark">Dark</button>
-<button [appSchemeSwitch]="schemes.prefered">Prefered</button> -->

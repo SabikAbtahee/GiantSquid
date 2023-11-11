@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from "@angular/core";
-import { SchemesView } from "../../config/settings.const";
+import { SchemesView, ThemesView } from "../../config/settings.const";
 
 @Component({
 	selector: "app-settings-view",
@@ -9,6 +9,7 @@ import { SchemesView } from "../../config/settings.const";
 export class SettingsViewComponent {
 	@Output() closeDrawerOutput = new EventEmitter<boolean>();
 	schemesView = SchemesView;
+	themesView = ThemesView;
 	closeDrawer() {
 		this.closeDrawerOutput.emit(true);
 	}

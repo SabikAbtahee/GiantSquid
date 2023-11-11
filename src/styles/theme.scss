@@ -2,13 +2,6 @@
 @use "typography";
 @use "@angular/material" as mat;
 
-// dd{
-//   --current:mat.define-palette(mat.$light-blue-palette)
-//   --brand: mat.define-palette(mat.$light-blue-palette),
-//   --teal : mat.define-palette(mat.$teal-palette)
-// }
-
-
 $GiantSquid-primary: mat.define-palette(mat.$light-blue-palette);
 $GiantSquid-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
 $GiantSquid-warn: mat.define-palette(mat.$red-palette, 900);
