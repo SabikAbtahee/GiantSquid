@@ -1,52 +1,38 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ],
-    "paths": {
-      "@animation": [
-        "./src/app/app-core/animations/animations.ts"
-      ],
-      "@common": [
-        "./src/app/app-common/index.ts"
-      ],
-      "@core": [
-        "./src/app/app-core/index.ts"
-      ],
-      "@environment": [
-        "./src/environements/environment.ts"
-      ],
-      "@material": [
-        "./src/app/app-shared/material.module.ts"
-      ],
-      "@shared": [
-        "./src/app/app-shared/app-shared.module.ts"
-      ]
-    }
-  },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+	"compileOnSave": false,
+	"compilerOptions": {
+		"baseUrl": "./",
+		"outDir": "./dist/out-tsc",
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"sourceMap": true,
+		"declaration": false,
+		"downlevelIteration": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"importHelpers": true,
+		"target": "ES2022",
+		"module": "ES2022",
+		"useDefineForClassFields": false,
+		"lib": ["ES2022", "dom"],
+		"paths": {
+			"@animation": ["./src/app/app-core/animations/animations.ts"],
+			"@common": ["./src/app/app-common/index.ts"],
+			"@core": ["./src/app/app-core/index.ts"],
+			"@environment": ["./src/environements/environment.ts"],
+			"@material": ["./src/app/app-shared/material.module.ts"],
+			"@shared": ["./src/app/app-shared/app-shared.module.ts"],
+			"@styles": ["./src/styles/colors.scss"]
+		}
+	},
+	"angularCompilerOptions": {
+		"enableI18nLegacyMessageIdFormat": false,
+		"strictInjectionParameters": true,
+		"strictInputAccessModifiers": true,
+		"strictTemplates": true
+	}
 }

@@ -33,13 +33,18 @@
               "src/styles/styles.scss",
               "src/styles/colors.scss",
               "./node_modules/flag-icons/css/flag-icons.min.css",
-              "src/styles/animations.scss",
-              "src/styles/shared.scss"
+              "src/styles/animations.scss"
 
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            }
           },
           "configurations": {
+
             "production": {
               "budgets": [
                 {
@@ -68,6 +73,7 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+
           "configurations": {
             "production": {
               "buildTarget": "AngularPortfolio:build:production"
@@ -86,6 +92,7 @@
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
+
           "options": {
             "polyfills": [
               "zone.js",

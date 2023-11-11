@@ -1,5 +1,78 @@
 @use "@angular/material" as mat;
-@import "./theme.scss";
+@use "theme";
+
+$primary-50: mat.get-color-from-palette(theme.$GiantSquid-primary, 50);
+$primary-300: mat.get-color-from-palette(theme.$GiantSquid-primary, 300);
+$primary: mat.get-color-from-palette(theme.$GiantSquid-primary, 500);
+$primary-700: mat.get-color-from-palette(theme.$GiantSquid-primary, 700);
+$primary-900: mat.get-color-from-palette(theme.$GiantSquid-primary, 900);
+
+$accent-50: mat.get-color-from-palette(theme.$GiantSquid-accent, 50);
+$accent-300: mat.get-color-from-palette(theme.$GiantSquid-accent, 300);
+$accent: mat.get-color-from-palette(theme.$GiantSquid-accent, 500-contrast);
+$accent-700: mat.get-color-from-palette(theme.$GiantSquid-accent, 700);
+$accent-900: mat.get-color-from-palette(theme.$GiantSquid-accent, 900);
+
+$warn-50: mat.get-color-from-palette(theme.$GiantSquid-warn, 50);
+$warn-300: mat.get-color-from-palette(theme.$GiantSquid-warn, 300);
+$warn: mat.get-color-from-palette(theme.$GiantSquid-warn, 500);
+$warn-700: mat.get-color-from-palette(theme.$GiantSquid-warn, 700);
+$warn-900: mat.get-color-from-palette(theme.$GiantSquid-warn, 900);
+
+$gs-black: #333333;
+$gs-white: #ffffff;
+
+$gs-grey-500: #666666;
+$gs-grey-400: #808080;
+$gs-grey-300: #b4b4b4;
+$gs-grey-200: #cccccc;
+$gs-grey-100: #d2d2d2;
+$gs-grey-50: #e5e5e5;
+$gs-grey-25: #fbfbfb;
+
+$all-colours: (
+	"gs-black": $gs-black,
+	"gs-white": $gs-white,
+	"gs-grey-500": $gs-grey-500,
+	"gs-grey-400": $gs-grey-400,
+	"gs-grey-300": $gs-grey-300,
+	"gs-grey-200": $gs-grey-200,
+	"gs-grey-100": $gs-grey-100,
+	"gs-grey-50": $gs-grey-50,
+	"gs-grey-25": $gs-grey-25,
+	"primary": $primary,
+	"primary-50": $primary-50,
+	"primary-300": $primary-300,
+	"primary-700": $primary-700,
+	"primary-900": $primary-900,
+
+	"accent": $accent,
+	"accent-50": $accent-50,
+	"accent-300": $accent-300,
+	"accent-700": $accent-700,
+	"accent-900": $accent-900,
+
+	"warn": $warn,
+	"warn-50": $warn-50,
+	"warn-300": $warn-300,
+	"warn-700": $warn-700,
+	"warn-900": $warn-900
+);
+
+@each $name, $value in $all-colours {
+	.#{$name} {
+		color: $value;
+	}
+}
+
+@each $name, $value in $all-colours {
+	.#{$name}-bg {
+		background-color: $value;
+	}
+}
 
 
-$primary : mat.get-color-from-palette($GiantSquid-primary, 500);
+.primary-bg {
+	background-color: mat.get-color-from-palette(theme.$GiantSquid-primary, 500);
+	color: $gs-white;
+}
