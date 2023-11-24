@@ -1,15 +1,13 @@
-import {
-	Directive,
-	HostListener,
-	Inject,
-	Input,
-	Renderer2
-} from "@angular/core";
+/* eslint-disable @angular-eslint/no-host-metadata-property */
+import { Directive, Inject, Input, Renderer2 } from "@angular/core";
 import { DOCUMENT } from "@angular/common";
 import { SchemeTypes } from "../config/settings.enum";
 
 @Directive({
-	selector: "[appSchemeSwitch]"
+	selector: "[appSchemeSwitch]",
+	host: {
+		"(click)": "onClick()"
+	}
 })
 export class SchemeSwitchDirective {
 	@Input() appSchemeSwitch!: SchemeTypes;
@@ -19,13 +17,12 @@ export class SchemeSwitchDirective {
 		@Inject(DOCUMENT) private document: Document
 	) {}
 
-	@HostListener("click")
 	onClick() {
 		this.changeScheme(this.appSchemeSwitch);
 	}
 
 	private changeScheme(value: SchemeTypes) {
-    const enumValues = Object.values(SchemeTypes);
+		const enumValues = Object.values(SchemeTypes);
 		for (const i of enumValues) {
 			this.removeClass(i);
 		}
