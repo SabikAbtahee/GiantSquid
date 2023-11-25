@@ -1,4 +1,4 @@
-@use "colors";
+@use "theme";
 .settings-view {
 	width: 400px;
 	height: 100%;
@@ -13,7 +13,7 @@
 	mat-button-toggle {
 		height: 40px;
 		box-sizing: border-box;
-		border: 1px solid colors.$gs-grey-300 !important;
+		border: 1px solid theme.$gs-grey-300 !important;
 	}
 	.mat-button-toggle-button,
 	.mat-button-toggle-label-content {
@@ -21,7 +21,7 @@
 		padding: 0px !important;
 	}
 	.mat-button-toggle-checked {
-		border: 2px solid colors.$primary !important;
+		border: 2px solid theme.$primary !important;
 	}
 }
 

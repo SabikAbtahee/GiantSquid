@@ -1,4 +1,4 @@
-@use "colors";
+@use "theme";
 
 .settings-icon {
 	position: absolute;
@@ -12,7 +12,7 @@
 #settingsIconId ::ng-deep {
 	#iconId {
 		font-size: 16px;
-		color: colors.$gs-white;
+		color: theme.$gs-white;
 		@apply animate-spin;
 	}
 }

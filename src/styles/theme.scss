@@ -2,7 +2,14 @@
 @use "typography";
 @use "@angular/material" as mat;
 
-$GiantSquid-primary: mat.define-palette(mat.$light-blue-palette);
+// @forward './core/theming/palette' show $red-palette, $pink-palette, $indigo-palette,
+//   $purple-palette, $deep-purple-palette, $blue-palette, $light-blue-palette, $cyan-palette,
+//   $teal-palette, $green-palette, $light-green-palette, $lime-palette, $yellow-palette,
+//   $amber-palette, $orange-palette, $deep-orange-palette, $brown-palette, $grey-palette,
+//   $gray-palette, $blue-grey-palette, $blue-gray-palette, $light-theme-background-palette,
+//   $dark-theme-background-palette, $light-theme-foreground-palette, $dark-theme-foreground-palette;
+
+$GiantSquid-primary: mat.define-palette(mat.$pink-palette);
 $GiantSquid-accent: mat.define-palette(mat.$yellow-palette, A200, A100, A400);
 $GiantSquid-warn: mat.define-palette(mat.$red-palette, 900);
 
@@ -27,9 +34,87 @@ $GiantSquid-dark-theme: mat.define-dark-theme(
 	)
 );
 
+@include mat.all-component-typographies($GiantSquid-light-theme);
+@include mat.all-component-themes($GiantSquid-light-theme);
+
 @media (prefers-color-scheme: dark) {
 	.dark-scheme,
 	.prefered-scheme {
 		@include mat.all-component-colors($GiantSquid-dark-theme);
 	}
+}
+
+$primary-50: mat.get-color-from-palette($GiantSquid-primary, 50);
+$primary-300: mat.get-color-from-palette($GiantSquid-primary, 300);
+$primary: mat.get-color-from-palette($GiantSquid-primary, 500);
+$primary-700: mat.get-color-from-palette($GiantSquid-primary, 700);
+$primary-900: mat.get-color-from-palette($GiantSquid-primary, 900);
+
+$accent-50: mat.get-color-from-palette($GiantSquid-accent, 50);
+$accent-300: mat.get-color-from-palette($GiantSquid-accent, 300);
+$accent: mat.get-color-from-palette($GiantSquid-accent, 500-contrast);
+$accent-700: mat.get-color-from-palette($GiantSquid-accent, 700);
+$accent-900: mat.get-color-from-palette($GiantSquid-accent, 900);
+
+$warn-50: mat.get-color-from-palette($GiantSquid-warn, 50);
+$warn-300: mat.get-color-from-palette($GiantSquid-warn, 300);
+$warn: mat.get-color-from-palette($GiantSquid-warn, 500);
+$warn-700: mat.get-color-from-palette($GiantSquid-warn, 700);
+$warn-900: mat.get-color-from-palette($GiantSquid-warn, 900);
+
+$gs-black: #333333;
+$gs-white: #ffffff;
+
+$gs-grey-500: #666666;
+$gs-grey-400: #808080;
+$gs-grey-300: #b4b4b4;
+$gs-grey-200: #cccccc;
+$gs-grey-100: #d2d2d2;
+$gs-grey-50: #e5e5e5;
+$gs-grey-25: #fbfbfb;
+
+$all-colours: (
+	"gs-black": $gs-black,
+	"gs-white": $gs-white,
+	"gs-grey-500": $gs-grey-500,
+	"gs-grey-400": $gs-grey-400,
+	"gs-grey-300": $gs-grey-300,
+	"gs-grey-200": $gs-grey-200,
+	"gs-grey-100": $gs-grey-100,
+	"gs-grey-50": $gs-grey-50,
+	"gs-grey-25": $gs-grey-25,
+	"primary": $primary,
+	"primary-50": $primary-50,
+	"primary-300": $primary-300,
+	"primary-700": $primary-700,
+	"primary-900": $primary-900,
+
+	"accent": $accent,
+	"accent-50": $accent-50,
+	"accent-300": $accent-300,
+	"accent-700": $accent-700,
+	"accent-900": $accent-900,
+
+	"warn": $warn,
+	"warn-50": $warn-50,
+	"warn-300": $warn-300,
+	"warn-700": $warn-700,
+	"warn-900": $warn-900
+);
+
+@each $name, $value in $all-colours {
+	.#{$name} {
+		color: $value;
+	}
+}
+
+@each $name, $value in $all-colours {
+	.#{$name}-bg {
+		background-color: $value;
+	}
+}
+
+.primary-bg {
+	background-color: mat.get-color-from-palette($GiantSquid-primary, 500);
+	color: $gs-white;
 }
